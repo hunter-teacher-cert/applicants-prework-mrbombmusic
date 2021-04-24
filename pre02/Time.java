@@ -7,7 +7,7 @@ public class Time {
     double minute = 55.0; // current minutes
     double seconds = ((hour*60.0)+minute)*60.0; // seconds in the day
     double secondsTotal = ((24.0*60.0)*60.0); // total seconds in a day
-    double secondsLeft = secondsTotal - seconds; // seconds left in the Friday
+    double secondsLeft = secondsTotal - seconds; // seconds left in the day
     double pastHour = 23.0; // past hours
     double pastMinute = 30.0; // past minutes
 
