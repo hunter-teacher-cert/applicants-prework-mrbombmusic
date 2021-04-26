@@ -9,7 +9,7 @@ public class Seconds {
     final int SECS_IN_MIN = 60;
 
     int seconds, minutes, hours;
-    int remainingSeconds;
+    int remainingSeconds;   
 
     System.out.print("Type in any number of seconds: ");
     totalSeconds = in.nextInt();
