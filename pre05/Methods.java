@@ -44,7 +44,7 @@ public class Methods{
     //print isTriangle method return value
     System.out.println(isTriangle(8, 7, 14));
 
-      // use use isTriangle method return value for conditional statement
+    // use isTriangle method return value for conditional statement
     boolean triangleResult = isTriangle(10, 4, 5);
     if(triangleResult) {
       System.out.println("These sticks will make a triangle");
