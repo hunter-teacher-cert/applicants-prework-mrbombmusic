@@ -3,21 +3,31 @@ import java.util.*;
 
 public class Time {
   public static void main(String[] args) {
-    double hour = 23.0; // current hours
-    double minute = 55.0; // current minutes
-    double seconds = ((hour*60.0)+minute)*60.0; // seconds in the day
-    double secondsTotal = ((24.0*60.0)*60.0); // total seconds in a day
-    double secondsLeft = secondsTotal - seconds; // seconds left in the day
-    double pastHour = 23.0; // past hours
-    double pastMinute = 30.0; // past minutes
+    /* Originally had all variables as double
+     but I converted all variables to int type after learning
+     I could convert data type to double later on.
+     The only double needed was for percentage of day.
+    */
+    int hour = 23; // current hours
+    int minute = 55; // current minutes
+    int secondsSinceMidnight = ((hour*60)+minute)*60; // seconds in the day
+    int secondsTotal = (24*60*60); // total seconds in a day
+    int secondsLeft = secondsTotal - secondsSinceMidnight; // seconds left in the day
+    int pastHour = 23; // starting time hours
+    int pastMinute = 30; // starting time minutes
 
 
     System.out.print("The number of seconds since midnight is: ");
-    System.out.println(seconds);
+    System.out.println(secondsSinceMidnight);
+
     System.out.print("The number of seconds left in the day is: ");
     System.out.println(secondsLeft);
+
+    // Learned from breakout group you can change data type by putting
+    // new data type in parentheses before variable you want to change
     System.out.print("The percentage of the day that has passed is: ");
-    System.out.println((seconds/secondsTotal)*100);
+    System.out.println(((double) secondsSinceMidnight/secondsTotal)*100);
+
     System.out.print("The elasped time from when I started is ");
     System.out.println((hour - pastHour) + " hours and " + (minute - pastMinute) + " minutes");
   }
